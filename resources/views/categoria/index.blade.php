@@ -9,6 +9,14 @@
 
                 <div class="card-body">
 
+                @if (session('status'))
+                    <div class="alert alert-success">
+                        {{ session('status') }}
+                    </div>
+                @endif
+
+                <a class="btn btn-success" href="{{ url('/categoria/create') }}" role="button">CRIAR</a>
+
 <table class="table">
   <thead>
     <tr>

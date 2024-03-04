@@ -21,7 +21,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        //
+        return view('categoria.create');
     }
 
     /**
@@ -29,7 +29,22 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request->all());
+
+        $messages = [
+            'nome.required' => 'O campo :attribute é obrigatório!',
+        ];
+
+        $validated = $request->validate([
+            'nome' => 'required|min:5',
+        ], $messages);
+
+        $categoria = new Categoria;
+        $categoria->nome = $request->nome;
+        $categoria->save();
+
+        return redirect('categoria')->with('status', 'Categoria salva com sucesso!');
+
     }
 
     /**
