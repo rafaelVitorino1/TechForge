@@ -41,7 +41,11 @@ Route::get('/categoria/{id}', [CategoriaController::class, 'show'])->name('categ
 
 
 // EDIT GET / UPDATE PUT
+// edit
+Route::get('/categoria/{id}/edit', [CategoriaController::class, 'edit'])->name('categoria.edit');
 
+// update
+Route::put('/categoria/{id}/edit', [CategoriaController::class, 'update'])->name('categoria.update');
 
 // DESTROY DELETE
-
+Route::delete('/categoria/{id}', [CategoriaController::class, 'destroy'])->name('categoria.destroy');
