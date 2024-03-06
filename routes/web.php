@@ -49,3 +49,4 @@ Route::put('/categoria/{id}/edit', [CategoriaController::class, 'update'])->name
 
 // DESTROY DELETE
 Route::delete('/categoria/{id}', [CategoriaController::class, 'destroy'])->name('categoria.destroy');
+
