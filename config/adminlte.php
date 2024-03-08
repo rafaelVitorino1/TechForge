@@ -302,6 +302,11 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
         [
+            'text' => 'Postagem',
+            'url'  => 'postagem',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
             'type'         => 'navbar-search',
             'text'         => 'search',
             'topnav_right' => true,
