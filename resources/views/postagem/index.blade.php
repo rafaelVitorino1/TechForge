@@ -21,6 +21,7 @@
   <thead>
     <tr>
       <th scope="col">#</th>
+      <th scope="col">Categoria</th>
       <th scope="col">Título</th>
       <th scope="col"></th>
     </tr>
@@ -30,6 +31,7 @@
     @foreach ($postagens as $value)
         <tr>
         <th scope="row">{{ $value->id }}</th>
+        <td>{{ $value->categoria->nome }}</td>
         <td>{{ $value->titulo }}</td>
         <td><a class="btn btn-primary" href="{{ url('/postagem/' . $value->id) }}" role="button">Visualizar</a></td>
         <td><a class="btn btn-warning" href="{{ url('/postagem/' . $value->id . '/edit') }}" role="button">Editar</a></td>
