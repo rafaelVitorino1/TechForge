@@ -79,4 +79,13 @@ Route::put('/postagem/{id}/edit', [PostagemController::class, 'update'])->name('
 // DESTROY DELETE
 Route::delete('/postagem/{id}', [PostagemController::class, 'destroy'])->name('postagem.destroy');
 
+// ------------------------------ BLOG ---------------------------------------------
+
+Route::get('/blog/categoria', [BlogController::class, 'categoria'])->name('blog.categoria');
+
+Route::get('/blog/categoria/{id}', [BlogController::class, 'categoriaPostagem'])->name('blog.categoriaPostagem');
+
+Route::get('/blog/autor', [BlogController::class, 'autor'])->name('blog.autor');
+
+Route::get('/blog/autor/{id}', [BlogController::class, 'autorPostagem'])->name('blog.autorPostagem');
 

@@ -9,8 +9,8 @@
 
                 <div class="card-body">
                     <strong>Nome:</strong>          {{ $categoria->nome }}<br>
-                    <strong>Criação:</strong>       {{ $categoria->created_at }}<br>
-                    <strong>Atualização:</strong>   {{ $categoria->updated_at }}<br>
+                    <strong>Criação:</strong>       {{ \Carbon\Carbon::parse($categoria->created_at)->format('d/m/Y h:i:s') }}<br>
+                    <strong>Atualização:</strong>   {{ \Carbon\Carbon::parse($categoria->updated_at)->format('d/m/Y h:i:s') }}<br>
                 </div>
 
             </div>

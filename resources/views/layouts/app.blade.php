@@ -22,8 +22,8 @@
 						<nav class="links">
 							<ul>
 								<li><a href="{{ url('/') }}">Início</a></li>
-								<li><a href="#">Ipsum</a></li>
-								<li><a href="#">Feugiat</a></li>
+								<li><a href="{{ url('/blog/categoria') }}">Categoria</a></li>
+								<li><a href="{{ url('/blog/autor') }}">Autor</a></li>
 								<li><a href="#">Tempus</a></li>
 								<li><a href="#">Adipiscing</a></li>
 							</ul>
@@ -57,17 +57,18 @@
 							<section>
 								<ul class="links">
 									<li>
-										<a href="#">
-											<h3>Lorem ipsum</h3>
-											<p>Feugiat tempus veroeros dolor</p>
+										<a href="{{ url('/login') }}">
+											<h3>Login</h3>
+											<p>Entrar no sistema</p>
 										</a>
 									</li>
 									<li>
-										<a href="#">
-											<h3>Dolor sit amet</h3>
-											<p>Sed vitae justo condimentum</p>
+										<a href="{{ url('/register') }}">
+											<h3>Register</h3>
+											<p>Faça seu registro</p>
 										</a>
 									</li>
+									<!--
 									<li>
 										<a href="#">
 											<h3>Feugiat veroeros</h3>
@@ -80,13 +81,14 @@
 											<p>Porta lectus amet ultricies</p>
 										</a>
 									</li>
+-->
 								</ul>
 							</section>
 
 						<!-- Actions -->
 							<section>
 								<ul class="actions stacked">
-									<li><a href="#" class="button large fit">Log In</a></li>
+									<li><a href="{{ url('/login') }}" class="button large fit">Log In</a></li>
 								</ul>
 							</section>
 
@@ -114,11 +116,11 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="{{ url('assets/js/jquery.min.js') }}"></script>
+			<script src="{{ url('assets/js/browser.min.js') }}"></script>
+			<script src="{{ url('assets/js/breakpoints.min.js') }}"></script>
+			<script src="{{ url('assets/js/util.js') }}"></script>
+			<script src="{{ url('assets/js/main.js') }}"></script>
 
 	</body>
 </html>
