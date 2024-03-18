@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Postagem;
 use App\Models\Categoria;
 use App\Models\User;
+use App\Models\Comentario;
 
 class BlogController extends Controller
 {
@@ -34,6 +35,23 @@ class BlogController extends Controller
     public function autorPostagem($id){
         $postagens = Postagem::where('user_id', $id)->orderBy('id', 'DESC')->get();
         return view('welcome', ['postagens' => $postagens]);
+    }
+
+    public function postagem($id){
+        $postagem = Postagem::find($id);
+        return view('blog.postagem', ['postagem' => $postagem]);
+    }
+
+    public function postagemComentario(Request $resquest, $id){
+
+        $comentario = new Comentario;
+        $comentario->conteudo = $resquest->conteudo;
+        $comentario->user_id = auth()->user()->id;
+        $comentario->postagem_id = $id;
+        $comentario->save();
+
+        return redirect()->route('blog.postagem', $id);
+
     }
 
 

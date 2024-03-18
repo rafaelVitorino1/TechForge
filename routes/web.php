@@ -89,3 +89,7 @@ Route::get('/blog/autor', [BlogController::class, 'autor'])->name('blog.autor');
 
 Route::get('/blog/autor/{id}', [BlogController::class, 'autorPostagem'])->name('blog.autorPostagem');
 
+Route::get('/blog/postagem/{id}', [BlogController::class, 'postagem'])->name('blog.postagem');
+
+Route::post('blog/postagemComentario/{id}', [BlogController::class, 'postagemComentario'])->name('blog.postagemComentario');
+
