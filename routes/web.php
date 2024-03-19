@@ -97,3 +97,4 @@ Route::get('/blog/postagem/{id}', [BlogController::class, 'postagem'])->name('bl
 
 Route::post('blog/postagemComentario/{id}', [BlogController::class, 'postagemComentario'])->name('blog.postagemComentario')->middleware('auth');
 
+Route::get('blog/curtida/{id}', [BlogController::class, 'curtida'])->name('blog.curtida')->middleware('auth');

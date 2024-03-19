@@ -7,6 +7,7 @@ use App\Models\Postagem;
 use App\Models\Categoria;
 use App\Models\User;
 use App\Models\Comentario;
+use App\Models\Curtida;
 
 class BlogController extends Controller
 {
@@ -51,6 +52,24 @@ class BlogController extends Controller
         $comentario->save();
 
         return redirect()->route('blog.postagem', $id);
+
+    }
+
+    public function curtida($id){
+
+        $curtidaExistente = Curtida::where('user_id', auth()->user()->id)->where('postagem_id', $id)->exists();
+
+        //dd($curtidaExistente);
+
+        if(!$curtidaExistente){
+            $curtida = new Curtida;
+            $curtida->user_id = auth()->user()->id;
+            $curtida->postagem_id = $id;
+            $curtida->save();
+        }
+
+        //return redirect()->route('blog.postagem', $id);
+        return back()->withInput();
 
     }
 

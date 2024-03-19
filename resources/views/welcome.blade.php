@@ -20,7 +20,10 @@
 								<footer>
 									<ul class="stats">
 										<li><a href="#">{{ $value->categoria->nome }}</a></li>
-										<li><a href="#" class="icon solid fa-heart">{{ $value->curtidas->count() }}</a></li>
+										<li><a href="" class="icon solid fa-heart">{{ $value->curtidas->count() }}</a></li>
+										@auth
+											<li><a href="{{ url('/blog/curtida/' . $value->id) }}" class="icon solid fa-heart">CURTIR</a></li>
+										@endauth
 										<li><a href="{{ url('/blog/postagem/' . $value->id) }}" class="icon solid fa-comment">{{ $value->comentarios->count() }} comenários</a></li>
 									</ul>
 								</footer>
