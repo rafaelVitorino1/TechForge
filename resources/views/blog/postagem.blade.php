@@ -23,7 +23,7 @@
 										<li><a href="{{ url('/blog/postagem/' . $postagem->id) }}" class="icon solid fa-comment">Esta postagem possui {{ $postagem->comentarios->count() }} comentário!</a></li>
 
                                         @auth
-    
+
                                         <form action="{{ route('blog.postagemComentario', $postagem->id) }}" method="post">
                                             @csrf
                                             <textarea name="conteudo" id="conteudo" cols="30" rows="10"></textarea>
