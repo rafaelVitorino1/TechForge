@@ -19,7 +19,7 @@
 								<footer>
 									<ul class="stats">
 										<li><a href="#">{{ $postagem->categoria->nome }}</a></li>
-										<li><a href="#" class="icon solid fa-heart">28</a></li>
+										<li><a href="#" class="icon solid fa-heart">{{ $postagem->curtidas->count() }}</a></li>
 										<li><a href="{{ url('/blog/postagem/' . $postagem->id) }}" class="icon solid fa-comment">Esta postagem possui {{ $postagem->comentarios->count() }} comentário!</a></li>
 
                                         @auth
