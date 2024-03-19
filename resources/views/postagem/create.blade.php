@@ -34,12 +34,12 @@
 
                     <br>
 
-
-
                   <label for="fname">Título:</label><br>
                   <input type="text"  class="form-control" name="titulo"><br><br>
+
                   <label for="fname">Conteúdo:</label><br>
                   <input type="text"  class="form-control" name="conteudo"><br><br>
+
                   <input type="submit"  class="form-control" value="ENVIAR">
 
                 </form>

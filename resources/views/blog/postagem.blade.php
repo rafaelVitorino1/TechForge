@@ -36,7 +36,9 @@
 								</footer>
 
                                 <h3>Comentários:</h3>
+
                                 @foreach ($postagem->comentarios as $comentario)
+
                                     <p>{{ $comentario->conteudo }}</p>
                                     <p>Feito por: {{ $comentario->user->name }} - Data: {{ $comentario->created_at }}</p>
 
