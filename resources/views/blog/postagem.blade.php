@@ -20,13 +20,18 @@
 									<ul class="stats">
 										<li><a href="#">{{ $postagem->categoria->nome }}</a></li>
 										<li><a href="#" class="icon solid fa-heart">28</a></li>
-										<li><a href="{{ url('/blog/postagem/' . $postagem->id) }}" class="icon solid fa-comment">Comentários - 128</a></li>
+										<li><a href="{{ url('/blog/postagem/' . $postagem->id) }}" class="icon solid fa-comment">Esta postagem possui {{ $postagem->comentarios->count() }} comentário!</a></li>
 
+                                        @auth
+    
                                         <form action="{{ route('blog.postagemComentario', $postagem->id) }}" method="post">
                                             @csrf
                                             <textarea name="conteudo" id="conteudo" cols="30" rows="10"></textarea>
                                             <button type="submit" class="btn btn-danger">Comentar</button>
                                         </form>
+
+                                        @endauth
+
 									</ul>
 								</footer>
 
