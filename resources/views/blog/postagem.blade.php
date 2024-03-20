@@ -14,7 +14,6 @@
 										<a href="#" class="author"><span class="name">{{ $postagem->user->name }}</span><img src="{{ url('images/avatar.jpg') }}" alt="" /></a>
 									</div>
 								</header>
-								<span class="image featured"><img src="{{ url('images/pic01.jpg') }}" alt="" /></span>
 								<p>{{ $postagem->conteudo }}</p>
 								<footer>
 									<ul class="stats">
