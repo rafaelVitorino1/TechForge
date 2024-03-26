@@ -1,5 +1,5 @@
 # Como clonar e instalar o sistema em outra máquina
-Precisa ter uma conta ativa no GitHub (https://github.com/)
+Você precisa ter uma conta ativa no GitHub (https://github.com/)
 
 ## Pré-requisito:
 
@@ -12,18 +12,17 @@ Precisa ter uma conta ativa no GitHub (https://github.com/)
 - Node (https://nodejs.org/)
 OBS.: Não esqueça de reiniciar o computador
 
-
 ### 1) Clonar o repositório do GitHub
-Vá até o projeto no GitHub que deseja clonar e clique no botão verde escrito "<> Code" então vai abrir um submenu e você deve clicar em "Open with GitHub Desktop".
-O GitHub Desktop vai abrir perguntando onde deve clonar o repositório. Clonar dentro do diretório "c:/xampp/htdocs/"
+Vá até o projeto no GitHub que deseja clonar e clique no botão verde escrito "<> Code" em seguida vai abrir um submenu e você deve clicar em "Open with GitHub Desktop".
+O GitHub Desktop vai abrir, em sua máquina, perguntando onde deve clonar o repositório. Clone no diretório "c:/xampp/htdocs/"
 
 ### 2) Abra o projeto no Visual Studio Code
 
-### 3) Criar o arquivo .env com base no arquivo .env.example
+### 3) Crie o arquivo .env com base no arquivo .env.example
 Abra o terminal e execute o código entre aspas "copy .env.example .env"
 
-### 4) Mudar o nome do banco no arquivo .env
-Deve estar na linha 14 escrito desta forma "DB_DATABASE=laravel"
+### 4) Mude o nome do banco no arquivo .env
+Deve estar na linha 14 e originalmente deve estar escrito desta forma "DB_DATABASE=laravel" mude a palavra "laravel" para o nome do banco do seu projeto
 
 ### 5) Instale as depedências
 Abra o terminal e execute o código entre aspas "composer install"
