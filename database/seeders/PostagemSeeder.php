@@ -18,6 +18,8 @@ class PostagemSeeder extends Seeder
             'conteudo' => 'receita do bolo de chocolate',
             'user_id' => 1,
             'categoria_id' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
 
         DB::table('postagens')->insert([
@@ -25,6 +27,8 @@ class PostagemSeeder extends Seeder
             'conteudo' => 'O acontecimento mais triste de 2022',
             'user_id' => 1,
             'categoria_id' => 2,
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
 
     }

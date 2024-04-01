@@ -17,12 +17,16 @@ class ComentarioSeeder extends Seeder
             'postagem_id' => 1,
             'user_id' => 1,
             'conteudo' => 'Muito bom o artigo!',
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
 
         DB::table('comentarios')->insert([
             'postagem_id' => 2,
             'user_id' => 1,
             'conteudo' => 'Parabéns!',
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
     }
 }

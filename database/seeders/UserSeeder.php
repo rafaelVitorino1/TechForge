@@ -18,6 +18,8 @@ class UserSeeder extends Seeder
             'name' => 'André Neves',
             'email' => 'andr@andr.com.br',
             'password' => Hash::make('123456789'),
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
     }
 }
