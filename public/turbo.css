@@ -8,12 +8,15 @@
 /*           Forums.html                       */
 /* ########################################### */
 .container{
-    margin: 20px;
+    margin-left:100px;
+    margin: 150px;
     padding: 20px;
+
 }
 
 .subforum{
     margin-top:20px;
+
 }
 
 .subforum-title{
