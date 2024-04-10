@@ -52,7 +52,7 @@ class PostagemController extends Controller
         $postagem->categoria_id = $request->categoria_id;
         $postagem->save();
 
-        return redirect('postagem')->with('status', 'Postagem salva com sucesso!');
+        return redirect('/')->with('status', 'Postagem salva com sucesso!');
 
     }
 

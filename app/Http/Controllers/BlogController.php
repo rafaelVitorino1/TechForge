@@ -11,12 +11,21 @@ use App\Models\Curtida;
 
 class BlogController extends Controller
 {
-    
+
     public function index()
     {
-        $postagens = Postagem::orderBy('id', 'DESC')->get();
-        return view('welcome', ['postagens' => $postagens]);
+
+        //dd('teste');
+        $categorias = Categoria::orderBy('nome', 'ASC')->get();
+        //$postagens = Postagem::orderBy('id', 'DESC')->get();
+
+       // foreach ($categorias as $key => $value) {
+        //    dd($value->postagens);
+       // }
+        //return view('welcome', ['postagens' => $postagens]);
+        return view('welcome', ['categorias' => $categorias]);
     }
+
 
     public function categoria(){
         $categorias = Categoria::orderBy('nome', 'ASC')->get();

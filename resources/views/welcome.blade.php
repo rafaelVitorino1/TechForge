@@ -21,7 +21,8 @@
             </button>
 
             <a href="{{ url('/home') }}"><button type="submit" class="btn btn-success" >Login</button></a>
-            <a href="{{ url('/register') }}"><button type="submit" class="btn btn-danger" >Registrar</button></a>
+            <a href="{{ url('/register') }}"><button type="submit" class="btn btn-warning" >Registrar</button></a>
+            <a href="{{ route('logout') }}"><button type="submit" class="btn btn-danger" >Sair</button></a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
@@ -30,7 +31,7 @@
 
               </ul>
               <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control mr-sm-2 navbox" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
               </form>
             </div>
@@ -39,24 +40,28 @@
 
     </header>
 
-    <a href="{{ url('/postagem/create') }}"><button type="submit" class="btn btn-info" >Criar</button></a>
 
-    @foreach($postagens as $value)
+
+    @foreach($categorias as $value)
 
     <div class="container">
-
+        <a href="{{ url('/postagem/create') }}"><button type="submit" class="btn btn-info" >Criar</button></a>
         <div class="subforum">
             <div class="subforum-title">
-                <h1>{{ $value->titulo }}</h1>
+                <h1>{{ $value->nome }}</h1>
             </div>
             <div class="subforum-row">
                 <div class="subforum-icon subforum-column center">
                     <i class="fa fa-car center"></i>
                 </div>
+
+                @foreach( $value->postagens as $value )
                 <div class="subforum-description subforum-column">
-                    <h4><a href="#">{{ $value->titulo }}</a></h4>
+                    <h4><a href="{{ url('/postagem/' . $value->id) }}"> {{ $value->titulo }}</a></h4>
                     <p>Description Content: let's try to be cool, otherwise,w at 'sthe point in libing together with people youdont' live.</p>
                 </div>
+
+                @endforeach
                 <div class="subforum-stats subforum-column center">
                     <span>24 Posts | 12 Topics</span>
                 </div>
@@ -65,16 +70,12 @@
                     <br>on <small>12 Dec 2020</small>
                 </div>
             </div>
+        </div>
+    </div>
 
             @endforeach
-        </div>
-        <!--More-->
 
 
-
-        </div>
-        <!---->
-    </div>
 
     <!-- Forum Info -->
     <div class="forum-info">

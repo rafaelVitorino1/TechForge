@@ -19,15 +19,18 @@
 
 
 
+
+
 /* ########################################### */
 /*           Forums.html                       */
 /* ########################################### */
 .container{
     margin-left:100px;
-    margin: 10px;
+    margin: 100px;
     padding: 20px;
 
 }
+
 
 .subforum{
     margin-top:20px;
@@ -39,6 +42,12 @@
     padding: 5px;
     border-radius: 5px;
     margin:4px;
+
+}
+
+.categoria{
+    color: azure;
+
 }
 
 .subforum-row{
