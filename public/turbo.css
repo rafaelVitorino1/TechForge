@@ -1,6 +1,12 @@
+@font-face {
+    font-family: 'aquire';
+    src: url(aquire.otf);
+}
+
+
 .fundo{
 
-    background-color: black;
+    background-color: #171717;
 }
 /* ########################################### */
 /*          navbar                             */
@@ -8,15 +14,24 @@
 
 
 .navbar{
-    background-color: #292B2E;
-    border: solid 2px rgb(7, 119, 247);
+    background-color: #282727;
+    border: solid 1px rgb(0, 0, 0);
+    box-shadow: 0px 5px 15px rgb(0, 0, 0);
 
 }
 
+.navbox {
 
+    margin-top: 10px;
+    margin-bottom: 10px;
 
+}
 
-
+.brand{
+    font-size:30px;
+    display: inline-block;
+    font-family: 'aquire';
+}
 
 
 
@@ -24,16 +39,26 @@
 /* ########################################### */
 /*           Forums.html                       */
 /* ########################################### */
+.corpo{
+    margin-right: 500px;
+
+}
+
+
 .container{
-    margin-left:100px;
-    margin: 100px;
-    padding: 20px;
+    margin: 50px 50px 20px 0;
+
+
+}
+
+.botao{
+
 
 }
 
 
 .subforum{
-    margin-top:20px;
+    margin-top:10px;
 
 }
 
@@ -42,6 +67,8 @@
     padding: 5px;
     border-radius: 5px;
     margin:4px;
+    font-family: Arial, Helvetica, sans-serif;
+
 
 }
 
@@ -59,7 +86,9 @@
     padding: 10px;
     margin:4px;
     border-radius: 5px;
-    background-color:#111314;
+    background-color: #1F1E1E;
+    border: solid 1px white;
+    color: white;
 }
 
 .subforum-description *{
@@ -78,4 +107,13 @@
 
 .subforum-devider{
     display: none;
+}
+
+.footer{
+    background-color: #282727;
+    border: solid 1px rgb(0, 0, 0);
+    box-shadow: 0px -5px 15px rgb(0, 0, 0);
+    color: white;
+
+
 }

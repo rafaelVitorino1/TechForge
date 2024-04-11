@@ -13,84 +13,80 @@
 
 <body class="fundo">
     <header>
-        <!--NavBar Section-->
+        <!--NavBar Section------------------------------------>
         <nav class="navbar navbar-expand-lg navbar-light ">
-            <a class="navbar-brand" href="#">TurboPC</a>
+            <a class="brand" href="#">TurboPC*</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-
-            <a href="{{ url('/home') }}"><button type="submit" class="btn btn-success" >Login</button></a>
-            <a href="{{ url('/register') }}"><button type="submit" class="btn btn-warning" >Registrar</button></a>
-            <a href="{{ route('logout') }}"><button type="submit" class="btn btn-danger" >Sair</button></a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                 </li>
-
               </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2 navbox" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-              </form>
+
+              <div>
+                    <div class="navbox">
+                    <a href="{{ url('/home') }}"><button type="submit" class="btn btn-success" >Login</button></a>
+                    <a href="{{ url('/register') }}"><button type="submit" class="btn btn-warning" >Registrar</button></a>
+                    <a href="{{ url('/postagem/create') }}"><button type="submit" class="btn btn-info botao" >Criar</button></a>
+                    <a href="{{ route('logout') }}"><button type="submit" class="btn btn-danger" >Sair</button></a>
+                    </div>
+                <!-------Conteudo da navbar------------>
+                </div>
             </div>
           </nav>
-        <!--SearchBox Section-->
-
     </header>
+        <!--NavBar Section------------------------------------>
 
 
 
-    @foreach($categorias as $value)
+            @foreach($categorias as $value)
+                    <div class="container" style="margin-left: 0px">
+                        <div class="subforum">
+                            <div class="subforum-title">
+                                <h1 style="color: rgb(0, 106, 148)">{{ $value->nome }}</h1>
+                            </div>
+                                @foreach( $value->postagens as $value )
+                                <div class="subforum-row">
+                                    <div class="subforum-icon subforum-column center">
+                                        <i class="fa fa-comments" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="subforum-description subforum-column">
 
-    <div class="container">
-        <a href="{{ url('/postagem/create') }}"><button type="submit" class="btn btn-info" >Criar</button></a>
-        <div class="subforum">
-            <div class="subforum-title">
-                <h1>{{ $value->nome }}</h1>
-            </div>
-            <div class="subforum-row">
-                <div class="subforum-icon subforum-column center">
-                    <i class="fa fa-car center"></i>
-                </div>
+                                        <h4><a href="{{ url('/postagem/' . $value->id) }}"> {{ $value->titulo }}</a></h4>
 
-                @foreach( $value->postagens as $value )
-                <div class="subforum-description subforum-column">
-                    <h4><a href="{{ url('/postagem/' . $value->id) }}"> {{ $value->titulo }}</a></h4>
-                    <p>Description Content: let's try to be cool, otherwise,w at 'sthe point in libing together with people youdont' live.</p>
-                </div>
+                                        <p>Description Content: let's try to be cool, otherwise,w at 'sthe point in libing together with people youdont' live.</p>
+                                    </div>
+                                    <div class="subforum-stats subforum-column center">
+                                        <span>24 Posts | 12 Topics</span>
+                                    </div>
+                                    <div class="subforum-info subforum-column">
+                                        Criado por: <a href="">{{ $value->user->name }}</a>
+                                        <br>em {{ \Carbon\Carbon::parse($value->created_at)->format('d/m/Y h:i:s') }}
+                                    </div>
+                            </div>
+                            @endforeach
+                        </div>
 
-                @endforeach
-                <div class="subforum-stats subforum-column center">
-                    <span>24 Posts | 12 Topics</span>
-                </div>
-                <div class="subforum-info subforum-column">
-                    <b><a href="">Last post</a></b> by <a href="">JustAUser</a>
-                    <br>on <small>12 Dec 2020</small>
-                </div>
-            </div>
-        </div>
-    </div>
-
+                    </div>
             @endforeach
 
 
-
     <!-- Forum Info -->
-    <div class="forum-info">
+
+    <div class="footer">
         <div class="chart">
-            MyForum - Stats &nbsp;<i class="fa fa-bar-chart"></i>
+            Estatística do blog &nbsp;<i class="fa fa-bar-chart"></i>
         </div>
-        <span><u>5,369</u> Posts in <u>48</u> Topics by <u>8,124</u> Members.</span><br>
-        <span>Latest post: <b><a href="">Random post</a></b> on Dec 15 2021 By <a href="">RandomUser</a></span>.<br>
-        <span>Check <a href="">the latest posts</a> .</span><br>
-    </div>
+        <span><u>***</u> Postagens feitas por <u>***</u> Usuário.</span><br>
+        <!-- Fazer um contador de postagens e usuarios-->
 
     <footer>
-        <span>&copy;  Selmi Abderrahim | All Rights Reserved</span>
+        <span>&copy;  Criado por Rafael Vitorino </span>
     </footer>
-
+  </div>
 
 </body>
 
