@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forum</title>
-    <link rel="stylesheet" href="turbo.css">
+    <link rel="stylesheet" href="turbopc.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -57,7 +57,7 @@
 
                                         <h4><a href="{{ url('/postagem/' . $value->id) }}"> {{ $value->titulo }}</a></h4>
 
-                                        <p>Description Content: let's try to be cool, otherwise,w at 'sthe point in libing together with people youdont' live.</p>
+                                        <p>{{ Str::limit($value->conteudo, 60) }}</p>
                                     </div>
                                     <div class="subforum-stats subforum-column center">
                                         <span>24 Posts | 12 Topics</span>
@@ -80,11 +80,11 @@
         <div class="chart">
             Estatística do blog &nbsp;<i class="fa fa-bar-chart"></i>
         </div>
-        <span><u>***</u> Postagens feitas por <u>***</u> Usuário.</span><br>
+        <span><u>{{ $count_postagem }}</u> Postagens feitas por <u>{{ $count_user }}</u> Usuário.</span><br>
         <!-- Fazer um contador de postagens e usuarios-->
 
     <footer>
-        <span>&copy;  Criado por Rafael Vitorino </span>
+        <span>&copy;  Criado por Rafael Vitorino e Matheus Crook </span>
     </footer>
   </div>
 

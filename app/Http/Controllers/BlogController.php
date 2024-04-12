@@ -23,7 +23,12 @@ class BlogController extends Controller
         //    dd($value->postagens);
        // }
         //return view('welcome', ['postagens' => $postagens]);
-        return view('welcome', ['categorias' => $categorias]);
+        $count_user = User::count();
+        $count_postagem = Postagem::count();
+        //dd($count_user);
+
+        return view('welcome', ['categorias' => $categorias, 'count_user' => $count_user, 'count_postagem' => $count_postagem]);
+
     }
 
 
