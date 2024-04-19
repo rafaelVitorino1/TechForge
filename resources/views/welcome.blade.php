@@ -57,7 +57,7 @@
 
                                         <h4><a href="{{ url('/postagem/' . $value->id) }}"> {{ $value->titulo }}</a></h4>
 
-                                        <p>{{ Str::limit($value->conteudo, 60) }}</p>
+                                        <p type="text">{{ Str::limit(strip_tags($value->conteudo, 60)) }}</p>
                                     </div>
                                     <div class="subforum-stats subforum-column center">
                                         <span>24 Posts | 12 Topics</span>
