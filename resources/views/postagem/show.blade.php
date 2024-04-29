@@ -1,10 +1,52 @@
-@extends('adminlte::page')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <link rel="stylesheet" href="{{ url('turbopc.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-@section('content')
+</head>
+
+<body>
+<div class="fundo">
+    <header>
+        <!--NavBar Section------------------------------------>
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <a class="brand" href="#">TurboPC*</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                </li>
+              </ul>
+
+              <div>
+                    <div class="navbox">
+                    <a href="{{ url('/home') }}"><button type="submit" class="btn btn-success" >Login</button></a>
+                    <a href="{{ url('/register') }}"><button type="submit" class="btn btn-warning" >Registrar</button></a>
+                    <a href="{{ url('/postagem/create') }}"><button type="submit" class="btn btn-info botao" >Criar</button></a>
+                    <a href="{{ route('logout') }}"><button type="submit" class="btn btn-danger" >Sair</button></a>
+                    </div>
+                <!-------Conteudo da navbar------------>
+                </div>
+            </div>
+          </nav>
+    </header>
+        <!--NavBar Section------------------------------------>
+
+
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="subforum-column">
                 <div class="card-header">Postagem</div>
 
                 <div class="card-body">
@@ -29,7 +71,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="subforum-column">
                 <div class="card-header">Comentarios</div>
 
                     <div class="card-body">
@@ -40,15 +82,28 @@
                         
                         @endforeach
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-@endsection
+</body>
 
 
+    <!-- Forum Info -->
 
+    <div class="footer">
+        <div class="chart">
+            Estatística do blog &nbsp;<i class="fa fa-bar-chart"></i>
+        </div>
+        <span><u>***</u> Postagens feitas por <u>***</u> Usuário.</span><br>
+        <!-- Fazer um contador de postagens e usuarios-->
+
+    <footer>
+        <span>&copy;  Criado por Rafael Vitorino, Matheus Crook </span>
+    </footer>
+  </div>
+
+</html>
 
