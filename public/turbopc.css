@@ -61,6 +61,7 @@
 
 .subforum{
     margin-top:10px;
+    margin-bottom: 50px;
 
 }
 
@@ -83,6 +84,8 @@
     display: grid;
     grid-template-columns: 7% 60% 13% 20%;
 }
+
+
 
 .subforum-column{
     padding: 10px;

@@ -43,7 +43,7 @@
 
 
             @foreach($categorias as $value)
-                    <div class="container" style="margin-left: 0px">
+                    <div class="container">
                         <div class="subforum">
                             <div class="subforum-title">
                                 <h1 style="color: rgb(0, 106, 148)">{{ $value->nome }}</h1>
