@@ -204,6 +204,13 @@ footer{
 /*            posts.html                       */
 /* ########################################### */
 
+
+/*                                        <div>
+                            <strong>Criação:</strong>       {{ \Carbon\Carbon::parse($postagem->created_at)->format('d/m/Y h:i:s') }}<br>
+                            <strong>Atualização:</strong>   {{ \Carbon\Carbon::parse($postagem->updated_at)->format('d/m/Y h:i:s') }}<br>
+                            </div>                      */
+
+
 /* posts table's head  */
 .table-head{
     display: flex;

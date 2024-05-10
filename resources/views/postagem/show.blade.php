@@ -39,12 +39,12 @@
             </div>
           </nav>
     </header>
-        <!--NavBar Section------------------------------------>
+
 
 
 
         
-
+<!--Postagem------------------------------------>
 <div class="subforum">
     <div class="row justify-content-center">
         
@@ -58,7 +58,7 @@
 
                 <div class="card-header">Postagem</div>
 
-                    <div class="container" style="margin-bottom: 70px;">
+                    <div class="container" style="margin-bottom: 50px;">
                         <strong>Categoria</strong>       {{ $postagem->categoria->nome }}<br>
                         <strong>Título:</strong>          {{ $postagem->titulo }}<br>
                         <strong>Autor:</strong>          {{ $postagem->user->name }}<br>
@@ -66,22 +66,30 @@
                         <br>
                         {!! $postagem->conteudo !!}
                         <br>
+                    </div>
+                         <div>
                         <strong>Criação:</strong>       {{ \Carbon\Carbon::parse($postagem->created_at)->format('d/m/Y h:i:s') }}<br>
                         <strong>Atualização:</strong>   {{ \Carbon\Carbon::parse($postagem->updated_at)->format('d/m/Y h:i:s') }}<br>
-                    </div>
-
-
+                        </div>
+                
             </div>
+            
         </div>
 
     </div>
 </div>
 
+<!--Comentarios---------------------------------------------------------------------------------------------------->
+
 <div class="subforum">
     <div class="row justify-content-center">
 
                 <div class="subforum-icon subforum-column" style="padding: 30px; margin:1px;">
+
+                    <div style="margin">
                     <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                    </div>
+
                     <h4>{{ $postagem->user->name }}</h4>
                 </div>
 
@@ -101,12 +109,14 @@
             </div>
         </div>
     </div>
+
+
+
 </div>
 
-</body>
 
 
-    <!-- Forum Info -->
+    <!-- FOOTER ----------------------------------------->
 
     <div class="footer">
         <div class="chart">
@@ -119,6 +129,9 @@
         <span>&copy;  Criado por Rafael Vitorino, Matheus Crook </span>
     </footer>
   </div>
+
+</body>
+
 
 </html>
 
