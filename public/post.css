@@ -52,13 +52,6 @@
 }
 
 
-.container{
-    margin: 50px 50px 20px 0;
-
-
-}
-
-
 
 .subforum{
     margin-top:10px;
@@ -119,7 +112,47 @@
     color: white;
     margin-top: 20px;
     padding: 20px;
-    
 
 
+
+}
+
+.midia{
+color: rgb(253, 253, 253);
+background: rgb(31, 30, 30);
+border-width: 1px;
+border-style: solid;
+border-color: rgb(46, 45, 45);
+border-radius: 4px;
+display: block;
+box-sizing: border-box;
+}
+
+.borda.post{
+color: rgb(253, 253, 253);
+background: rgb(31, 30, 30);
+border-width: 1px;
+border-style: solid;
+border-color: rgb(46, 45, 45);
+border-radius: 4px;
+display: block;
+box-sizing: border-box;
+}
+
+.conteudo{
+    margin: 20px 20px 20px 0px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+
+.carlos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }

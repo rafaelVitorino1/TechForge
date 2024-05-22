@@ -1,0 +1,48 @@
+
+.block--messages .message, .block--messages .block-row {
+    color: #fdfdfd;
+    background: #1f1e1e;
+    border-width: 1px;
+    border-style: solid;
+    border-top-color: #2e2d2d;
+    border-right-color: #2e2d2d;
+    border-bottom-color: #2e2d2d;
+    border-left-color: #2e2d2d;
+    border-radius: 4px;
+}
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section {
+    display: block;
+}
+* {
+    box-sizing: border-box;
+}
+
+user agent stylesheet
+article {
+    display: block;
+    unicode-bidi: isolate;
+}
+.block-body {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --input-border-heavy: #2e2d2d;
+    --input-border-light: #2e2d2d;
+}
+html {
+    font: 15px / 1.4 sans-serif;
+    font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', sans-serif;
+    font-weight: 400;
+    color: #fdfdfd;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+    background-color: #171717;
+}
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}

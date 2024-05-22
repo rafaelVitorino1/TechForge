@@ -1,92 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forum</title>    
+    <title>Forum</title>
+    <!-- External Stylesheets -->
     <link rel="stylesheet" href="{{ url('turbopc.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body class="fundo">
+
     <header>
-        <!--NavBar Section------------------------------------>
-        <nav class="navbar navbar-expand-lg navbar-light ">
-            <a class="brand" href="#">TurboPC*</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                </li>
-              </ul>
+        <div class="containner center">
+                <img src="logo.png">
+                <!-- <div class="glowing-circle"></div> -->
+        </div>
 
-              <div>
-                    <div class="navbox">
-                    <a href="{{ url('/home') }}"><button type="submit" class="btn btn-success" >Login</button></a>
-                    <a href="{{ url('/register') }}"><button type="submit" class="btn btn-warning" >Registrar</button></a>
-                    <a href="{{ url('/postagem/create') }}"><button type="submit" class="btn btn-info botao" >Criar</button></a>
-                    <a href="{{ route('logout') }}"><button type="submit" class="btn btn-danger" >Sair</button></a>
-                    </div>
-                <!-------Conteudo da navbar------------>
-                </div>
-            </div>
-          </nav>
+
+<!-- NavBar Section -->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Forum TechForge</a>
+      </div>
+
+      <div class="nav navbar-nav navbar-right">
+        <li><a href="{{ url('/register') }}"><span class="glyphicon glyphicon-user"></span> Registrar</a></li>
+        <li><a href="{{ url('/home') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Botoes-->
+  <!-- <div> -->
+  <!-- <a href="{{ url('/home') }}"><button type="submit" class="btn btn-success" >Login</button></a> -->
+  <!-- <a href="{{ url('/register') }}"><button type="submit" class="btn btn-warning" >Registrar</button></a> -->
+  <!-- <a href="{{ url('/postagem/create') }}"><button type="submit" class="btn btn-info botao" >Criar</button></a> -->
+  <!-- <a href="{{ route('logout') }}"><button type="submit" class="btn btn-danger" >Sair</button></a> -->
+  <!-- </div> -->
+
+
+<!-- #NavBar Section# -->
     </header>
-        <!--NavBar Section------------------------------------>
 
-
-
-            @foreach($categorias as $value)
-                    <div class="container">
-                        <div class="subforum">
-                            <div class="subforum-title">
-                                <h1 style="color: rgb(0, 106, 148)">{{ $value->nome }}</h1>
-                            </div>
-                                @foreach( $value->postagens as $value )
-                                <div class="subforum-row">
-                                    <div class="subforum-icon subforum-column center">
-                                        <i class="fa fa-comments" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="subforum-description subforum-column">
-
-                                        <h4><a href="{{ url('/postagem/' . $value->id) }}"> {{ $value->titulo }}</a></h4>
-
-                                        <p type="text">{{ Str::limit(strip_tags($value->conteudo, 60)) }}</p>
-                                    </div>
-                                    <div class="subforum-stats subforum-column center">
-                                        <span>24 Posts | 12 Topics</span>
-                                    </div>
-                                    <div class="subforum-info subforum-column">
-                                        Criado por: <a href="">{{ $value->user->name }}</a>
-                                        <br>em {{ \Carbon\Carbon::parse($value->created_at)->format('d/m/Y h:i:s') }}
-                                    </div>
-                            </div>
-                            @endforeach
-                        </div>
-
+    <!-- Main Content -->
+        @foreach($categorias as $categoria)
+        <div class="container" style="padding: 0px">
+            <div class="subforum">
+                <div class="subforum-title">
+                    <o>{{ $categoria->nome }}</a>
+                </div>
+                @foreach( $categoria->postagens as $postagem )
+                <div class="subforum-row">
+                    <div class="subforum-icon subforum-column center">
+                        <i class="fa fa-comments" aria-hidden="true"></i>
                     </div>
-            @endforeach
-
-
-    <!-- Forum Info -->
-
+                    <div class="subforum-description subforum-column">
+                        <h5><a href="{{ url('/postagem/' . $postagem->id) }}">{{ $postagem->titulo }}</a></h5>
+                        <p type="text">{{ Str::limit(strip_tags($postagem->conteudo), 60) }}</p>
+                    </div>
+                    <div class="subforum-stats subforum-column center">
+                        <span>24 Posts | 12 Topics</span>
+                    </div>
+                    <div class="subforum-info subforum-column">
+                        Criado por: <a href="">{{ $postagem->user->name }}</a><br>
+                        em {{ \Carbon\Carbon::parse($postagem->created_at)->format('d/m/Y h:i:s') }}
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+        @endforeach
+    <!-- Footer -->
     <div class="footer">
         <div class="chart">
             Estatística do blog &nbsp;<i class="fa fa-bar-chart"></i>
         </div>
         <span><u>{{ $count_postagem }}</u> Postagens feitas por <u>{{ $count_user }}</u> Usuário.</span><br>
-        <!-- Fazer um contador de postagens e usuarios-->
-
-    <footer>
-        <span>&copy;  Criado por Rafael Vitorino e Matheus Crook </span>
-    </footer>
-  </div>
+        <footer>
+            <span>&copy; Criado por Rafael Vitorino e Matheus Crook </span>
+        </footer>
+    </div>
 
 </body>
 

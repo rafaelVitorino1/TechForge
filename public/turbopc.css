@@ -1,167 +1,177 @@
+/* Importando fonte personalizada */
 @font-face {
     font-family: 'aquire';
     src: url(aquire.otf);
 }
 
 
-.fundo{
 
+/* Corpo da página */
+body {
+    background-color: #212121;
+    color: #fff;
+    font-family: monospace, serif;
+    letter-spacing: 0.05em;
+    background-image: url(fundo.png);
+    background-repeat:repeat;
+}
+
+/* Fundo da página */
+.fundo {
     background-color: #171717;
 }
 
-.teste{
-
-    background-color: white;
-
-}
-/* ########################################### */
-/*          navbar                             */
-/* ########################################### */
-
-
-.navbar{
-    background-color: #282727;
-    border: solid 1px rgb(0, 0, 0);
-    box-shadow: 0px 5px 15px rgb(0, 0, 0);
-
+/* NavBar */
+.navbararra {
+    color: rgb(253, 253, 253);
+    background: rgb(23, 23, 23);
+    display: block;
+    box-sizing: border-box;
 }
 
-.navbox {
+.glowing-circle {
+    width: 20px;
+    height: 20px;
+    border-radius:50%;
+    background-color: #FF914D;
+    -webkit-animation: glowing 1s ease-in-out infinite alternate;
+    -moz-animation: glowing 1s ease-in-out infinite alternate;
+    animation: glowing 1s ease-in-out infinite alternate;
+  }
+  @-webkit-keyframes glowing {
+    from {
+      box-shadow: 0 0 10px #FF914D, 0 0 20px #FF914D, 0 0 30px #FF914D, 0 0 40px #FF914D, 0 0 50px #FFDE59, 0 0 60px #FFDE59, 0 0 70px #FFDE59;
+    }
+    to {
+      box-shadow: 0 0 20px #FFDE59, 0 0 30px #FF914D, 0 0 40px #FF914D, 0 0 50px #FF914D, 0 0 60px #FF914D, 0 0 70px #FF914D, 0 0 80px #FF914D;
+    }
+  }
 
-    margin-top: 10px;
-    margin-bottom: 10px;
-
+.navb{
+    border-top-left-radius: 4px;
+    border-left: none;
+    color: inherit;
+    cursor: pointer;
+    float: left;
+    padding: 8px 10px;
+    background-color: transparent;
+    text-decoration: none;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    text-overflow: ellipsis;
+    max-width: 110px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    background: rgb(20, 19, 19);
+    color: rgb(211, 210, 210);
 }
 
-.brand{
-    font-size:30px;
+.navfaixa{
+    font-size: 13px;
+    color: rgb(253, 253, 253);
+    background: rgb(40, 39, 39);
+    border-bottom: 1px solid rgb(33, 32, 32);
+    box-sizing: border-box;
+}
+
+.p-header{
+    color: rgb(43, 43, 43);
+    background: rgb(23, 23, 23);
+    display: block;
+    box-sizing: border-box;
+}
+
+.brand {
+    font-size: 30px;
     display: inline-block;
     font-family: 'aquire';
 }
 
 
-
-
-/* ########################################### */
-/*           Forums.html                       */
-/* ########################################### */
-.corpo{
-    margin-right: 500px;
-
+/* Container principal */
+.container {
+    margin: 20px 50px 20px 0;
+    color: rgb(253, 253, 253);
+    background: rgb(31, 30, 30);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(46, 45, 45);
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-
-.container{
-    margin: 50px 50px 20px 0;
-
-
+/* Títulos das categorias */
+.subforum-title {
+    padding: 6px 10px;
+    margin: 0px;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(253, 253, 253);
+    border-bottom: 1px solid rgb(46, 45, 45);
+    background: linear-gradient(0deg, rgb(31, 30, 30), rgb(31, 30, 30));
+    box-sizing: border-box;
 }
 
-
-
-.subforum{
-    margin-top:10px;
-    margin-bottom: 50px;
-
-}
-
-.subforum-title{
-    background-color:#292B2E;
-    padding: 5px;
-    border-radius: 5px;
-    margin:4px;
-    font-family: Arial, Helvetica, sans-serif;
-
-
-}
-
-.categoria{
+.categoria {
     color: azure;
-
 }
 
-.subforum-row{
+/* Linha de cada postagem */
+.subforum-row {
     display: grid;
     grid-template-columns: 7% 60% 13% 20%;
 }
 
-
-
-.subforum-column{
-    padding: 10px;
-    margin:4px;
-    border-radius: 5px;
-    background-color: #1F1E1E;
-    border: solid 1px white;
-    color: white;
+/* Colunas da postagem */
+.subforum-column {
+    padding: 5px;
+    margin: 0px;
+    color: rgb(253, 253, 253);
+    background: rgb(31, 30, 30);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(46, 45, 45);
+    box-sizing: border-box;
 }
 
-.subforum-description *{
+.subforum-description * {
     margin-block: 0;
 }
 
-.center{
+.center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.subforum-icon i{
+.subforum-icon i {
     font-size: 45px;
 }
 
-.subforum-devider{
-    display: none;
-}
-
-.footer{
+/* Rodapé */
+.footer {
     background-color: #282727;
     border: solid 1px rgb(0, 0, 0);
     box-shadow: 0px -5px 15px rgb(0, 0, 0);
     color: white;
-
-
 }
 
-
-/* ########################################### */
-/*           Pagina de Postagem                */
-/* ########################################### */
-
-
-.post{
-    
-    color: rgb(0, 0, 0);
-}
-
-/* ########################################### */
-/*                   Login                     */
-/* ########################################### */
-
-*, ::after, ::before {
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: #212121;
-    color: #fff;
-    font-family: monospace, serif;
-    letter-spacing: 0.05em;
-  }
-  
-  h1 {
-    font-size: 23px;
-  }
-  
-  .form {
+/* Estilização dos inputs de login */
+.form {
     width: 300px;
     padding: 64px 15px 24px;
     margin: 0 auto;
-  }
-  .form .control {
+}
+
+.form .control {
     margin: 0 0 24px;
-  }
-  .form .control input {
+}
+
+.form .control input {
     width: 100%;
     padding: 14px 16px;
     border: 0;
@@ -170,12 +180,15 @@
     font-family: monospace, serif;
     letter-spacing: 0.05em;
     font-size: 16px;
-  }
-  .form .control input:hover, .form .control input:focus {
+}
+
+.form .control input:hover,
+.form .control input:focus {
     outline: none;
     border: 0;
-  }
-  .form .btn {
+}
+
+.form .btn {
     width: 100%;
     display: block;
     padding: 14px 16px;
@@ -187,112 +200,10 @@
     font-weight: bold;
     font-family: monospace;
     font-size: 16px;
-  }
-  
-  .block-cube {
-    position: relative;
-  }
-  .block-cube .bg-top {
-    position: absolute;
-    height: 10px;
-    background: #020024;
-    background: linear-gradient(90deg, #020024 0%, #340979 37%, #00d4ff 94%);
-    bottom: 100%;
-    left: 5px;
-    right: -5px;
-    transform: skew(-45deg, 0);
-    margin: 0;
-  }
-  .block-cube .bg-top .bg-inner {
-    bottom: 0;
-  }
-  .block-cube .bg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: #020024;
-    background: linear-gradient(90deg, #020024 0%, #340979 37%, #00d4ff 94%);
-  }
-  .block-cube .bg-right {
-    position: absolute;
-    background: #020024;
-    background: #00d4ff;
-    top: -5px;
-    z-index: 0;
-    bottom: 5px;
-    width: 10px;
-    left: 100%;
-    transform: skew(0, -45deg);
-  }
-  .block-cube .bg-right .bg-inner {
-    left: 0;
-  }
-  .block-cube .bg .bg-inner {
-    transition: all 0.2s ease-in-out;
-  }
-  .block-cube .bg-inner {
-    background: #212121;
-    position: absolute;
-    left: 2px;
-    top: 2px;
-    right: 2px;
-    bottom: 2px;
-  }
-  .block-cube .text {
-    position: relative;
-    z-index: 2;
-  }
-  .block-cube.block-input input {
-    position: relative;
-    z-index: 2;
-  }
-  .block-cube.block-input input:focus ~ .bg-right .bg-inner, .block-cube.block-input input:focus ~ .bg-top .bg-inner, .block-cube.block-input input:focus ~ .bg-inner .bg-inner {
-    top: 100%;
-    background: rgba(255, 255, 255, 0.5);
-  }
-  .block-cube.block-input .bg-top,
-  .block-cube.block-input .bg-right,
-  .block-cube.block-input .bg {
-    background: rgba(255, 255, 255, 0.5);
-    transition: background 0.2s ease-in-out;
-  }
-  .block-cube.block-input .bg-right .bg-inner,
-  .block-cube.block-input .bg-top .bg-inner {
-    transition: all 0.2s ease-in-out;
-  }
-  .block-cube.block-input:focus .bg-top,
-  .block-cube.block-input:focus .bg-right,
-  .block-cube.block-input:focus .bg, .block-cube.block-input:hover .bg-top,
-  .block-cube.block-input:hover .bg-right,
-  .block-cube.block-input:hover .bg {
-    background: rgba(255, 255, 255, 0.8);
-  }
-  .block-cube.block-cube-hover:focus .bg .bg-inner, .block-cube.block-cube-hover:hover .bg .bg-inner {
-    top: 100%;
-  }
-  
-  .credits {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    padding: 15px 15px;
-    width: 100%;
-    z-index: 111;
-  }
-  .credits a {
-    opacity: 0.6;
-    color: #fff;
-    font-size: 11px;
-    text-decoration: none;
-  }
-  .credits a:hover {
-    opacity: 1;
-  }
+}
 
-.btnadd{
-
+/* Botão adicional */
+.btnadd {
     width: 100%;
     padding: 20px 16px;
     border: 0;
@@ -303,14 +214,6 @@
     font-size: 16px;
 }
 
-
 .btnadd:hover {
-
-color:#00d4ff
-
-
-
+    color: #00d4ff;
 }
-
-
- 

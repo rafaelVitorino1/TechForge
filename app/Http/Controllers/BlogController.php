@@ -15,17 +15,18 @@ class BlogController extends Controller
     public function index()
     {
 
-        //dd('teste');
-        $categorias = Categoria::orderBy('nome', 'ASC')->get();
         //$postagens = Postagem::orderBy('id', 'DESC')->get();
-
-       // foreach ($categorias as $key => $value) {
+        //dd('teste');
+        // foreach ($categorias as $key => $value) {
         //    dd($value->postagens);
-       // }
+        // }
         //return view('welcome', ['postagens' => $postagens]);
+        //dd($count_user);
+
+        $categorias = Categoria::orderBy('nome', 'ASC')->get();
         $count_user = User::count();
         $count_postagem = Postagem::count();
-        //dd($count_user);
+
 
         return view('welcome', ['categorias' => $categorias, 'count_user' => $count_user, 'count_postagem' => $count_postagem]);
 
