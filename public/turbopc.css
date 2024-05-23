@@ -22,6 +22,15 @@ body {
 }
 
 /* NavBar */
+
+.avatar {
+    vertical-align: middle;
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    margin-left: 1470px;
+  }
+
 .navbararra {
     color: rgb(253, 253, 253);
     background: rgb(23, 23, 23);

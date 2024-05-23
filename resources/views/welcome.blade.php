@@ -33,6 +33,7 @@
         <a class="navbar-brand" href="#">Forum TechForge</a>
       </div>
 
+      <img src="img_avatar.png" alt="Avatar" class="avatar">
       <div class="nav navbar-nav navbar-right">
         <li><a href="{{ url('/register') }}"><span class="glyphicon glyphicon-user"></span> Registrar</a></li>
         <li><a href="{{ url('/home') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
