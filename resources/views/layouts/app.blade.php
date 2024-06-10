@@ -1,18 +1,13 @@
 <!DOCTYPE HTML>
-<!--
-	Future Imperfect by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Blog do André Neves</title>
+		<title>TechForge Forum</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{{ url('assets/css/main.css') }}" />
 	</head>
-	<body class="single is-preload">
 
+	<body class="single is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -41,56 +36,6 @@
 						</nav>
 					</header>
 
-				<!-- Menu -->
-					<section id="menu">
-
-						<!-- Search -->
-							<section>
-								<form class="search" method="get" action="#">
-									<input type="text" name="query" placeholder="Search" />
-								</form>
-							</section>
-
-						<!-- Links -->
-							<section>
-								<ul class="links">
-									<li>
-										<a href="{{ url('/login') }}">
-											<h3>Login</h3>
-											<p>Entrar no sistema</p>
-										</a>
-									</li>
-									<li>
-										<a href="{{ url('/register') }}">
-											<h3>Register</h3>
-											<p>Faça seu registro</p>
-										</a>
-									</li>
-									<!--
-									<li>
-										<a href="#">
-											<h3>Feugiat veroeros</h3>
-											<p>Phasellus sed ultricies mi congue</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>Etiam sed consequat</h3>
-											<p>Porta lectus amet ultricies</p>
-										</a>
-									</li>
--->
-								</ul>
-							</section>
-
-						<!-- Actions -->
-							<section>
-								<ul class="actions stacked">
-									<li><a href="{{ url('/login') }}" class="button large fit">Log In</a></li>
-								</ul>
-							</section>
-
-					</section>
 
 				<!-- Main -->
 					<div id="main">

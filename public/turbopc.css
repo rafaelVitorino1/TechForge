@@ -23,6 +23,10 @@ body {
 
 /* NavBar */
 
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+  }
+
 .avatar {
     vertical-align: middle;
     width: 47px;
@@ -38,45 +42,6 @@ body {
     box-sizing: border-box;
 }
 
-.glowing-circle {
-    width: 20px;
-    height: 20px;
-    border-radius:50%;
-    background-color: #FF914D;
-    -webkit-animation: glowing 1s ease-in-out infinite alternate;
-    -moz-animation: glowing 1s ease-in-out infinite alternate;
-    animation: glowing 1s ease-in-out infinite alternate;
-  }
-  @-webkit-keyframes glowing {
-    from {
-      box-shadow: 0 0 10px #FF914D, 0 0 20px #FF914D, 0 0 30px #FF914D, 0 0 40px #FF914D, 0 0 50px #FFDE59, 0 0 60px #FFDE59, 0 0 70px #FFDE59;
-    }
-    to {
-      box-shadow: 0 0 20px #FFDE59, 0 0 30px #FF914D, 0 0 40px #FF914D, 0 0 50px #FF914D, 0 0 60px #FF914D, 0 0 70px #FF914D, 0 0 80px #FF914D;
-    }
-  }
-
-.navb{
-    border-top-left-radius: 4px;
-    border-left: none;
-    color: inherit;
-    cursor: pointer;
-    float: left;
-    padding: 8px 10px;
-    background-color: transparent;
-    text-decoration: none;
-    box-sizing: border-box;
-    overflow: hidden;
-    white-space: nowrap;
-    overflow-wrap: normal;
-    text-overflow: ellipsis;
-    max-width: 110px;
-    border: none;
-    border-radius: 4px;
-    text-decoration: none;
-    background: rgb(20, 19, 19);
-    color: rgb(211, 210, 210);
-}
 
 .navfaixa{
     font-size: 13px;
@@ -110,7 +75,12 @@ body {
     border-color: rgb(46, 45, 45);
     border-radius: 4px;
     box-sizing: border-box;
+
 }
+
+/* Container do Conteudo das postagens */
+
+
 
 /* Títulos das categorias */
 .subforum-title {
@@ -145,6 +115,21 @@ body {
     border-style: solid;
     border-color: rgb(46, 45, 45);
     box-sizing: border-box;
+}
+
+/* Card do avatar */
+.user{
+    border-radius: 0px;
+    position: relative;
+    min-width: 0px;
+    background: rgb(27, 27, 27);
+    border-right: 1px solid rgb(46, 45, 45);
+    flex: 0 0 140px;
+    display: block;
+    vertical-align: top;
+    padding: 10px;
+    box-sizing: border-box;
+
 }
 
 .subforum-description * {
