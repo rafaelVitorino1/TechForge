@@ -46,12 +46,15 @@
           <li class="nav-item dropdown">
             <button class="btn btn-secondary text-light dropdown-toggle" style="background-color: #1f1e1e;" data-bs-toggle="dropdown" aria-expanded="false" style="padding: 0px">
             <img src="{{ url('images/img_avatar.png') }}" class="rounded-circle" height="40" alt="Avatar" loading="lazy" />
-            {{ $postagem->user->name }}
+            nome.usuario
             </button>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item fa fa-user" href="#"> Perfil</a></li>
               <li><a class="dropdown-item fa fa-plus" href="{{ url('/postagem/create') }}"> Nova Postagem</a></li></li>
               <li><hr class="dropdown-divider"></li>
+              <!-- SOMENTE ADM -->
+              <li><a class="dropdown-item text-info fa fa-unlock-alt" href="{{ url('/home') }}"> ADMIN LTE</a></li>
+              <!----------------->
               <li><a class="dropdown-item text-danger fa fa-sign-out" href="#"> SAIR</a></li>
             </ul>
           </li>

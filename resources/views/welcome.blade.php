@@ -5,7 +5,15 @@
     <!-- Main Content -->
         @foreach($categorias as $categoria)
         <div class="container box-container" style="padding: 0px">
-            <div class="subforum">
+            <div class="subforum">         
+                    <div class="btn-toolbar float-end" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="btn-group me-2" role="group" aria-label="First group">
+                            <button type="button" class="btn btn-primary">1</button>
+                            <button type="button" class="btn btn-primary">2</button>
+                            <button type="button" class="btn btn-primary">3</button>
+                            <button type="button" class="btn btn-primary">4</button>
+                        </div>
+                    </div>
                 <div class="subforum-title">
                     <o>{{ $categoria->nome }}</a>
                 </div>
