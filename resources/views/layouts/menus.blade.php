@@ -41,22 +41,28 @@
                 </li>
             </ul>
     @auth
+
+        @csrf
     <div class="collapse navbar-collapse" id="navbarNavDarkDropdown" >
         <ul class="navbar-nav float-end">
           <li class="nav-item dropdown">
             <button class="btn btn-secondary text-light dropdown-toggle" style="background-color: #1f1e1e;" data-bs-toggle="dropdown" aria-expanded="false" style="padding: 0px">
             <img src="{{ url('images/img_avatar.png') }}" class="rounded-circle" height="40" alt="Avatar" loading="lazy" />
-            nome.usuario
+            {{auth()->user()->name}}
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fa fa-user" href="#"> Perfil</a></li>
+              <li><a class="dropdown-item fa fa-user" href="{{url ('/perfil/' . auth()->user()->id) }}"> Perfil</a></li>
               <li><a class="dropdown-item fa fa-plus" href="{{ url('/postagem/create') }}"> Nova Postagem</a></li></li>
               <li><hr class="dropdown-divider"></li>
               <!-- SOMENTE ADM -->
               <li><a class="dropdown-item text-info fa fa-unlock-alt" href="{{ url('/home') }}"> ADMIN LTE</a></li>
               <!----------------->
-              <li><a class="dropdown-item text-danger fa fa-sign-out" href="#"> SAIR</a></li>
+              <li><a class="dropdown-item text-danger fa fa-sign-out" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" href="{{url ('/logout') }}"> SAIR</a></li>
             </ul>
+
+            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+        @csrf
+            </form>
           </li>
         </ul>
       </div>
@@ -64,7 +70,7 @@
 
     @guest
     <div class="btn-group" role="group" aria-label="Basic example">
-        <a href="{{ url('/home') }}"><button type="button" class="btn btn-secondary text-light fa fa-sign-in" style="background-color: #1f1e1e"> Entrar</button></a>
+        <a href="{{ url('/inicio') }}"><button type="button" class="btn btn-secondary text-light fa fa-sign-in" style="background-color: #1f1e1e"> Entrar</button></a>
         <a href="{{ url('/register') }}"><button type="button" class="btn btn-secondary text-light fa fa-user" style="background-color: #1f1e1e"> Registrar</button></a>
     </div>
     @endguest

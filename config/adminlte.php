@@ -292,20 +292,25 @@ return [
     'menu' => [
         // Navbar items:
         [
-            'text' => 'Principal',
+            'text' => ' início',
+            'url'  => 'inicio',
+            'icon' => 'fas fa-fw fa-home',
+        ],
+        [
+            'text' => 'Status',
             'url'  => 'home',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
             'text' => 'Categoria',
             'url'  => 'categoria',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-list',
             'can'  => 'is_admin',
         ],
         [
             'text' => 'Postagem',
             'url'  => 'postagem',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-clipboard',
             'can'  => 'is_admin',
         ],
         ['header' => 'account_settings'],

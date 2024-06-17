@@ -8,9 +8,9 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Postagem - CRIAR</div>
+        <div class="center ">
+            <div class="card border-0 cont-container container align-self-stretch ">
+                <div class="card-header">Criar Postagem</div>
 
                 <div class="card-body">
 
@@ -42,7 +42,7 @@
 
                   <label for="fname">Conteúdo:</label><br>
                   <textarea id="inp_editor1" class="form-control" name="conteudo">
-                        
+
                   </textarea>
 
                   <input type="submit"  class="form-control" value="ENVIAR">

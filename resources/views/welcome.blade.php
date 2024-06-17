@@ -5,29 +5,23 @@
     <!-- Main Content -->
         @foreach($categorias as $categoria)
         <div class="container box-container" style="padding: 0px">
-            <div class="subforum">         
-                    <div class="btn-toolbar float-end" role="toolbar" aria-label="Toolbar with button groups">
-                        <div class="btn-group me-2" role="group" aria-label="First group">
-                            <button type="button" class="btn btn-primary">1</button>
-                            <button type="button" class="btn btn-primary">2</button>
-                            <button type="button" class="btn btn-primary">3</button>
-                            <button type="button" class="btn btn-primary">4</button>
-                        </div>
-                    </div>
+            <div class="subforum">
                 <div class="subforum-title">
-                    <o>{{ $categoria->nome }}</a>
+                    <a href="#" class="link-underline-dark fw-bold fs-2" style="color: #4da6cc">{{ $categoria->nome }}</a>
                 </div>
-                @foreach( $categoria->postagens as $postagem )
+                @foreach( $categoria->postagens->slice(0, 5) as $postagem )
                 <div class="subforum-row">
                     <div class="subforum-icon subforum-column center">
                         <i class="fa fa-comments" aria-hidden="true"></i>
                     </div>
                     <div class="subforum-description subforum-column">
-                        <h5><a href="{{ url('blog/postagem/' . $postagem->id) }}">{{ $postagem->titulo }}</a></h5>
+                        <h5><a class="link-underline-dark fw-bold" style="color: #0383b9" href="{{ url('blog/postagem/' . $postagem->id) }}">{{ $postagem->titulo }}</a></h5>
                         <p type="text">{{ Str::limit(strip_tags($postagem->conteudo), 60) }}</p>
                     </div>
                     <div class="subforum-stats subforum-column center">
-                        <span>24 Posts | 12 Topics</span>
+                        <span><p class="solid fa fa-commenting"> {{ $postagem->comentarios->count() }} </p></span>
+                        <p> | </p>
+                        <span><p class="fa fa-thumbs-up" style="padding: 5px"> {{ $postagem->curtidas->count() }}</p></span>
                     </div>
                     <div class="subforum-info subforum-column">
                         Criado por: <a href="">{{ $postagem->user->name }}</a><br>

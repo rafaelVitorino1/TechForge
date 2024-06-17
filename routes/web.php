@@ -30,6 +30,9 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+    Route::redirect('/inicio', '/TechForge/public');
+
+
 
     // ------------------------------ CRUD CATEGORIA ---------------------------------------------
 
@@ -99,3 +102,10 @@ Route::get('/blog/postagem/{id}', [BlogController::class, 'postagem'])->name('bl
 Route::post('blog/postagemComentario/{id}', [BlogController::class, 'postagemComentario'])->name('blog.postagemComentario')->middleware('auth');
 
 Route::get('blog/curtida/{id}', [BlogController::class, 'curtida'])->name('blog.curtida')->middleware('auth');
+
+
+// ------------------------------ Perfil ---------------------------------------------
+
+Route::post('/perfil/editar_perfil/{id}', [App\Http\Controllers\PerfilController::class, 'perfilUpdate'])->name('editar_perfil');
+Route::get('/perfil/{id}', [App\Http\Controllers\PerfilController::class, 'autorPostagem'])->name('autorPostagem');
+
