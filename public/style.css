@@ -149,7 +149,6 @@ html, body {
     border-right: 1px solid rgb(46, 45, 45);
     flex: 0 0 140px;
     display: block;
-    vertical-align: top;
     padding: 10px;
     box-sizing: border-box;
 
@@ -178,59 +177,3 @@ html, body {
 }
 
 /* Estilização dos inputs de login */
-.form {
-    width: 300px;
-    padding: 64px 15px 24px;
-    margin: 0 auto;
-}
-
-.form .control {
-    margin: 0 0 24px;
-}
-
-.form .control input {
-    width: 100%;
-    padding: 14px 16px;
-    border: 0;
-    background: transparent;
-    color: #fff;
-    font-family: monospace, serif;
-    letter-spacing: 0.05em;
-    font-size: 16px;
-}
-
-.form .control input:hover,
-.form .control input:focus {
-    outline: none;
-    border: 0;
-}
-
-.form .btn {
-    width: 100%;
-    display: block;
-    padding: 14px 16px;
-    background: transparent;
-    outline: none;
-    border: 0;
-    color: #fff;
-    letter-spacing: 0.1em;
-    font-weight: bold;
-    font-family: monospace;
-    font-size: 16px;
-}
-
-/* Botão adicional */
-.btnadd {
-    width: 100%;
-    padding: 20px 16px;
-    border: 0;
-    background: transparent;
-    color: #fff;
-    font-family: monospace, serif;
-    letter-spacing: 0.05em;
-    font-size: 16px;
-}
-
-.btnadd:hover {
-    color: #00d4ff;
-}
