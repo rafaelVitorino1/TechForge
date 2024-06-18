@@ -40,7 +40,7 @@ class BlogController extends Controller
 
     public function categoriaPostagem($id){
         $postagens = Postagem::where('categoria_id', $id)->orderBy('id', 'DESC')->get();
-        return view('welcome', ['postagens' => $postagens]);
+        return view('blog.categoria', ['postagens' => $postagens]);
     }
 
     public function autor(){

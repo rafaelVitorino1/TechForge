@@ -8,7 +8,7 @@
         <div class="container box-container" style="padding: 0px">
             <div class="subforum">
                 <div class="subforum-title">
-                    <a href="#" class="link-underline-dark fw-bold fs-2" style="color: #4da6cc">{{ $categoria->nome }}</a>
+                    <a href="{{ url('blog/categoria/' . $categoria->id) }}" class="link-underline-dark fw-bold fs-2" style="color: #4da6cc">{{ $categoria->nome }}</a>
                 </div>
                 @foreach( $categoria->postagens->slice(0, 5) as $postagem )
                 <div class="subforum-row">

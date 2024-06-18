@@ -107,5 +107,8 @@ Route::get('blog/curtida/{id}', [BlogController::class, 'curtida'])->name('blog.
 // ------------------------------ Perfil ---------------------------------------------
 
 Route::post('/perfil/editar_perfil/{id}', [App\Http\Controllers\PerfilController::class, 'perfilUpdate'])->name('editar_perfil');
+
 Route::get('/perfil/{id}', [App\Http\Controllers\PerfilController::class, 'autorPostagem'])->name('autorPostagem');
+
+Route::get('/categoria/pagina/{id}', [App\Http\Controllers\PostagemController::class, 'show'])->name('postagem.show');
 
