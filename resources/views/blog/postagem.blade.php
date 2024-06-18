@@ -3,6 +3,7 @@
 @section('content')
 
                         <!-- Conteudo da Postagem-->
+                    <div class="vh-100">
                         <article>
                             <div class="center box-container container" style="padding: 0px">
 
@@ -54,7 +55,7 @@
                             </div>
                         </article>
                         @endforeach
-
+                    </div>
                         <hr class="container">
 
                         @auth

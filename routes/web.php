@@ -67,10 +67,10 @@ Route::middleware(['auth'])->group(function () {
 
     // CREATE GET / STORE POST
     // create
-    Route::get('/postagem/create', [PostagemController::class, 'create'])->middleware('can:is_admin')->name('postagem.create');
+    Route::get('/postagem/create', [PostagemController::class, 'create'])->name('postagem.create');
 
     //store
-    Route::post('/postagem/create', [PostagemController::class, 'store'])->middleware('can:is_admin')->name('postagem.store');
+    Route::post('/postagem/create', [PostagemController::class, 'store'])->name('postagem.store');
 
     // SHOW - GET
     Route::get('/postagem/{id}', [PostagemController::class, 'show'])->middleware('can:is_admin')->name('postagem.show');

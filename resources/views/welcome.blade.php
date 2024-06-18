@@ -3,6 +3,7 @@
 @section('content')
 
     <!-- Main Content -->
+    <div class="vh-100">
         @foreach($categorias as $categoria)
         <div class="container box-container" style="padding: 0px">
             <div class="subforum">
@@ -32,5 +33,6 @@
             </div>
         </div>
         @endforeach
+    </div>
     <!-- #Main Content# -->
 @endsection
