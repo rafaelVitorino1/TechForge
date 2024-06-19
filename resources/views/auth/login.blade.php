@@ -15,7 +15,7 @@
 
     <!-- Main Content -->
     <div class="container-fluid container cont-container">
-      <div class="row main-content bg-success text-center" style="background-color: black">
+      <div class="row main-content bg-success text-center" style="background-color: black;">
         <div class="col-md-4 text-center company__info">
           <span class="company__logo">
             <h2><span class="fa fa-android"></span></h2>
@@ -54,7 +54,7 @@
     </div>
     <!-- Footer -->
     <div class="container-fluid text-center footer">
-      Coded with &hearts; by <a href="https://bit.ly/yinkaenoch">Yinka.</a></p>
+
     </div>
   </body>
 

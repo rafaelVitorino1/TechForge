@@ -33,23 +33,21 @@
 
 
 <!-- Footer Section -->
-    <footer class=" text-white text-center text-lg-start mt-4" style="background-color: #1f1e1e;">
+<div class="contfooter" style="margin-top: 54px; display: flexbox; align-items: flex-end;">
+    <footer class=" text-white text-center text-lg-start mt-4" style="background-color: #1f1e1e">
         <div class="container p-4">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                    <h5 class="trademark" style="align-items: center;20">© 2024 TECHFORGE FORUM</h5>
-                </div>
+                    <h5 class="trademark" style="text-align: center">© 2024 TECHFORGE FORUM</h5>
             </div>
-        </div>
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2024 TechForge Forum
+
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); align">
             <div class="mt-2">
                 <a href="https://github.com/rafaelVitorino1/TechForge" class="text-white me-3">
-                    <i class="fa fa-github" style="font-size: 50px;"></i>
+                    <i class="fa fa-github" style="font-size: 50px; padding:5px"></i>
                 </a>
             </div>
         </div>
     </footer>
+</div>
 <!-- #Footer Section# -->
 
 </body>
