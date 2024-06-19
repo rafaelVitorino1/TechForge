@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #fff;
+  color: #000000;
 }
 .fa-android {
   font-size: 3em;
@@ -35,7 +35,7 @@
   }
 }
 .row > h2 {
-  color: #008080;
+  color: #ff0000;
 }
 .login_form {
   background-color: #fff;
@@ -78,4 +78,6 @@ form {
 .btn:focus {
   background-color: #008080;
   color: #fff;
+  align-items: center;
 }
+
