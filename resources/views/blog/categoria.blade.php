@@ -5,7 +5,7 @@
     <!-- Main Content -->
     <div class="vh-100" style="padding: 50px">
        <h1>NOME CATEGORIA</h1>
-  
+
                 @foreach( $postagens as $postagem )
                 <div class="subforum-row">
                     <div class="subforum-icon subforum-column center">
@@ -26,9 +26,10 @@
                     </div>
                 </div>
                 @endforeach
+                {{ $postagens->links() }}
             </div>
         </div>
-      
+
     </div>
     <!-- #Main Content# -->
 

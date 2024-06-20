@@ -22,8 +22,8 @@
                                             <p>{{ $postagem->conteudo }}</p>
                                             </div>
                                                 <div class="card-footer" style="border-color: #2e2d2d; padding: 5px">
-                                                    2 days ago
-                                                    <span><a href="{{ url('/blog/curtida/' . $postagem->id) }}" class=" fa fa-thumbs-up float-end fs-2"> {{ $postagem->curtidas->count() }}</a></span>
+                                                    <a href="{{ url('favoritar/' . $postagem->id) }}" class="btn btn fa fa-bookmark botao-container" style="padding: 5px"> Salvar</a>
+                                                    <a href="{{ url('/blog/curtida/' . $postagem->id) }}" class="btn btn fa fa-thumbs-up botao-container" style="padding: 5px"> Curtir: {{ $postagem->curtidas->count() }}</a>
                                                 </div>
                                     </div>
 

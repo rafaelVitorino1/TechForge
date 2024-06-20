@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\PostagemController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\SalvosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -112,3 +113,6 @@ Route::get('/perfil/{id}', [App\Http\Controllers\PerfilController::class, 'autor
 
 Route::get('/categoria/pagina/{id}', [App\Http\Controllers\PostagemController::class, 'show'])->name('postagem.show');
 
+Route::get('/favoritar/{id}', [App\Http\Controllers\SalvosController::class, 'favoritar'])->name('salvos');
+
+Route::get('/salvos', [App\Http\Controllers\SalvosController::class, 'index'])->name('salvos');

@@ -39,7 +39,7 @@ class BlogController extends Controller
     }
 
     public function categoriaPostagem($id){
-        $postagens = Postagem::where('categoria_id', $id)->orderBy('id', 'DESC')->get();
+        $postagens = Postagem::where('categoria_id', $id)->orderBy('id', 'DESC')->paginate(10);
         return view('blog.categoria', ['postagens' => $postagens]);
     }
 

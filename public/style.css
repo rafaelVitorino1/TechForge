@@ -93,9 +93,17 @@ html, body {
 .cont-container {
     margin: 20px 50px 20px 0;
     color: rgb(253, 253, 253);
+    background: rgb(31, 30, 30);
     border-width: 1px;
     box-sizing: border-box;
 
+}
+
+.botao-container{
+    color: #028dc9;
+    background: rgb(31, 30, 30);
+    border-width: 1px;
+    box-sizing: border-box;
 }
 
 

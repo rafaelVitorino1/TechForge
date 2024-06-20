@@ -53,6 +53,7 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item fa fa-user" href="{{url ('/perfil/' . auth()->user()->id) }}"> Perfil</a></li>
               <li><a class="dropdown-item fa fa-plus" href="{{ url('/postagem/create') }}"> Nova Postagem</a></li></li>
+              <li><a class="dropdown-item fa fa-bookmark" href="{{ url('/salvos') }}"> Salvos</a></li>
               <li><hr class="dropdown-divider"></li>
               <!-- SOMENTE ADM -->
               <li><a class="dropdown-item text-info fa fa-unlock-alt" href="{{ url('/home') }}"> ADMIN LTE</a></li>
