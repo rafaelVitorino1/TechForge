@@ -20,6 +20,13 @@ class CategoriaSeeder extends Seeder
         ]);
 
         DB::table('categorias')->insert([
+            'nome' => 'Software',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+
+        DB::table('categorias')->insert([
             'nome' => 'Eletrônicos',
             'created_at' => now(),
             'updated_at' => now(),

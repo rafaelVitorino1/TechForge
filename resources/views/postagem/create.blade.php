@@ -6,7 +6,7 @@
 <script type="text/javascript" src="{{ url('/richtexteditor/rte.js') }}"></script>
 <script type="text/javascript" src="{{ url('/richtexteditor/plugins/all_plugins.js') }}"></script>
 
-<div class="container">
+<div class="container vh-100">
     <div class="row justify-content-center">
         <div class="center ">
             <div class="card border-0 cont-container container align-self-stretch ">

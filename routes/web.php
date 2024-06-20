@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\PostagemController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\SalvosController;
+use App\Http\Controllers\PublicacaoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -78,7 +79,7 @@ Route::middleware(['auth'])->group(function () {
 
     // EDIT GET / UPDATE PUT
     // edit
-    Route::get('/postagem/{id}/edit', [PostagemController::class, 'edit'])->middleware('can:is_admin')->name('postagem.edit');
+    Route::get('/postagem/{id}/edit', [PostagemController::class, 'edit'])->middleware('auth')->name('postagem.edit');
 
     // update
     Route::put('/postagem/{id}/edit', [PostagemController::class, 'update'])->middleware('can:is_admin')->name('postagem.update');
@@ -113,6 +114,10 @@ Route::get('/perfil/{id}', [App\Http\Controllers\PerfilController::class, 'autor
 
 Route::get('/categoria/pagina/{id}', [App\Http\Controllers\PostagemController::class, 'show'])->name('postagem.show');
 
-Route::get('/favoritar/{id}', [App\Http\Controllers\SalvosController::class, 'favoritar'])->name('salvos');
+Route::get('/favoritar/{id}', [App\Http\Controllers\SalvosController::class, 'favoritar'])->name('salvos')->middleware('auth');
 
-Route::get('/salvos', [App\Http\Controllers\SalvosController::class, 'index'])->name('salvos');
+Route::get('/salvos', [App\Http\Controllers\SalvosController::class, 'index'])->name('blog.publi');
+
+//Route::get('/publi', [App\Http\Controllers\PublicacaoController::class, 'indexUsuario'])->name('receita.usuario');
+
+Route::get('/publi', [App\Http\Controllers\PublicacaoController::class, 'indexUsuario'])->name('blog.publi');

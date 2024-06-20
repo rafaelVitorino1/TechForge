@@ -2,11 +2,11 @@
 
 @section('content')
 
-<link rel="stylesheet" type="text/css" href="{{ url("/assets/css/salvos.css")}}" />
+
 
 <div class="text-center" style="color: #0383b9">
     <br>
-<h3>Minhas Publicações Salvas</h3>
+<h3>Publicações Salvas</h3>
 </div>
 
 

@@ -3,7 +3,8 @@
 @section('content')
 
                         <!-- Conteudo da Postagem-->
-                    <div class="vh-100">
+                <div class="vh-100">
+                    <div>
                         <article>
                             <div class="center box-container container" style="padding: 0px">
 
@@ -19,7 +20,7 @@
                                             </div>
                                             <div class="card-body" style="padding: 5px">
                                             <h4 class="card-title">{{ $postagem->titulo }}</h4>
-                                            <p>{{ $postagem->conteudo }}</p>
+                                            <p>{{ strip_tags($postagem->conteudo) }}</p>
                                             </div>
                                                 <div class="card-footer" style="border-color: #2e2d2d; padding: 5px">
                                                     <a href="{{ url('favoritar/' . $postagem->id) }}" class="btn btn fa fa-bookmark botao-container" style="padding: 5px"> Salvar</a>
@@ -67,7 +68,7 @@
                         </form>
 
                         @endauth
-
+                <div>
 @endsection
 
 

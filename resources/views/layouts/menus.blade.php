@@ -45,7 +45,7 @@
         @csrf
     <div class="collapse navbar-collapse" id="navbarNavDarkDropdown" >
         <ul class="navbar-nav float-end">
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown" style="padding-right: 100px">
             <button class="btn btn-secondary text-light dropdown-toggle" style="background-color: #1f1e1e;" data-bs-toggle="dropdown" aria-expanded="false" style="padding: 0px">
             <img src="{{ url('images/img_avatar.png') }}" class="rounded-circle" height="40" alt="Avatar" loading="lazy" />
             {{auth()->user()->name}}
@@ -53,10 +53,14 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item fa fa-user" href="{{url ('/perfil/' . auth()->user()->id) }}"> Perfil</a></li>
               <li><a class="dropdown-item fa fa-plus" href="{{ url('/postagem/create') }}"> Nova Postagem</a></li></li>
+              <li><a class="dropdown-item fa fa-clipboard" href="{{ url('/publi') }}"> Minhas Postagens</a></li></li>
               <li><a class="dropdown-item fa fa-bookmark" href="{{ url('/salvos') }}"> Salvos</a></li>
               <li><hr class="dropdown-divider"></li>
               <!-- SOMENTE ADM -->
-              <li><a class="dropdown-item text-info fa fa-unlock-alt" href="{{ url('/home') }}"> ADMIN LTE</a></li>
+              @can('is_admin')
+                <li><a class="dropdown-item text-info fa fa-unlock-alt" href="{{ url('/home') }}"> ADMIN LTE</a></li>
+              @else
+              @endcan
               <!----------------->
               <li><a class="dropdown-item text-danger fa fa-sign-out" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" href="{{url ('/logout') }}"> SAIR</a></li>
             </ul>

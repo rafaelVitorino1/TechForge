@@ -17,15 +17,12 @@
               </div>
               <h4 class="mb-2">{{auth()->user()->name}}</h4>
               <p class="text-muted center"><span class="badge bg-primary">Membro</span></p>
+              <p></p>
 
-              <div style="padding: 10px">
-                <button  type="button" class="btn btn-info btn-rounded btn-lg fa fa-pencil-square-o" style="padding: 10px; margin: 10px">
-                    Publicados
-                </button>
-
-                <button  type="button" class="btn btn-info btn-rounded btn-lg fa fa-star" style="padding: 10px; margin: 10px">
-                    Favoritos
-                </button>
+              <hr>
+              <div class="btn-group">
+                <a href="{{ url('/salvos') }}"          class="btn fa fa-bookmark fs-1" style="color: white"><i> Salvos</i></a>
+                <a href="{{ url('/publi') }}" class="btn fa fa-clipboard fs-1" style="color: white"><i> Postagens</i></a>
               </div>
 
 

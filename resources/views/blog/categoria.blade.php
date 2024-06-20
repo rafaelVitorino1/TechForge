@@ -4,7 +4,7 @@
 
     <!-- Main Content -->
     <div class="vh-100" style="padding: 50px">
-       <h1>NOME CATEGORIA</h1>
+       <h1 style="color: #0383b9">Ultimas Postagens</h1>
 
                 @foreach( $postagens as $postagem )
                 <div class="subforum-row">
